@@ -3,8 +3,8 @@ package services
 import (
 	"context"
 
-	"github.com/PauloPHAL/microservices/pkg/dto"
-	"github.com/PauloPHAL/microservices/pkg/interfaces"
+	"github.com/PauloPHAL/refreshtoken/pkg/dto"
+	"github.com/PauloPHAL/refreshtoken/pkg/interfaces"
 )
 
 type UserServiceImpl struct {

@@ -4,10 +4,10 @@ import (
 	"context"
 	"time"
 
-	"github.com/PauloPHAL/microservices/pkg/dto"
-	"github.com/PauloPHAL/microservices/pkg/interfaces"
-	"github.com/PauloPHAL/microservices/pkg/models"
-	"github.com/PauloPHAL/microservices/pkg/perrors"
+	"github.com/PauloPHAL/refreshtoken/pkg/dto"
+	"github.com/PauloPHAL/refreshtoken/pkg/interfaces"
+	"github.com/PauloPHAL/refreshtoken/pkg/models"
+	"github.com/PauloPHAL/refreshtoken/pkg/perrors"
 )
 
 type AuthServiceImpl struct {

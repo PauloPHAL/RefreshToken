@@ -3,10 +3,10 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/PauloPHAL/microservices/internal/views"
-	"github.com/PauloPHAL/microservices/pkg/dto"
-	"github.com/PauloPHAL/microservices/pkg/interfaces"
-	"github.com/PauloPHAL/microservices/pkg/perrors"
+	"github.com/PauloPHAL/refreshtoken/internal/views"
+	"github.com/PauloPHAL/refreshtoken/pkg/dto"
+	"github.com/PauloPHAL/refreshtoken/pkg/interfaces"
+	"github.com/PauloPHAL/refreshtoken/pkg/perrors"
 	"github.com/gin-gonic/gin"
 )
 

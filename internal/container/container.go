@@ -1,11 +1,11 @@
 package container
 
 import (
-	"github.com/PauloPHAL/microservices/internal/handlers"
-	"github.com/PauloPHAL/microservices/internal/services"
-	"github.com/PauloPHAL/microservices/pkg/interfaces"
-	"github.com/PauloPHAL/microservices/pkg/repository"
-	"github.com/PauloPHAL/microservices/pkg/security"
+	"github.com/PauloPHAL/refreshtoken/internal/handlers"
+	"github.com/PauloPHAL/refreshtoken/internal/services"
+	"github.com/PauloPHAL/refreshtoken/pkg/interfaces"
+	"github.com/PauloPHAL/refreshtoken/pkg/repository"
+	"github.com/PauloPHAL/refreshtoken/pkg/security"
 	"gorm.io/gorm"
 )
 

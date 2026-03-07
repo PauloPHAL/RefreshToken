@@ -3,7 +3,7 @@ package valueobjects
 import (
 	"strings"
 
-	"github.com/PauloPHAL/microservices/pkg/perrors"
+	"github.com/PauloPHAL/refreshtoken/pkg/perrors"
 )
 
 type Name struct {

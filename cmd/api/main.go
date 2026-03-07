@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/PauloPHAL/microservices/internal/config"
-	"github.com/PauloPHAL/microservices/internal/server"
+	"github.com/PauloPHAL/refreshtoken/internal/config"
+	"github.com/PauloPHAL/refreshtoken/internal/server"
 )
 
 func initialize() {

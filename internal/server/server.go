@@ -1,9 +1,9 @@
 package server
 
 import (
-	"github.com/PauloPHAL/microservices/internal/config"
-	"github.com/PauloPHAL/microservices/internal/container"
-	"github.com/PauloPHAL/microservices/internal/router"
+	"github.com/PauloPHAL/refreshtoken/internal/config"
+	"github.com/PauloPHAL/refreshtoken/internal/container"
+	"github.com/PauloPHAL/refreshtoken/internal/router"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )

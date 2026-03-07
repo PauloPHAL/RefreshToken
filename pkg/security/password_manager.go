@@ -1,8 +1,8 @@
 package security
 
 import (
-	"github.com/PauloPHAL/microservices/pkg/interfaces"
-	"github.com/PauloPHAL/microservices/pkg/perrors"
+	"github.com/PauloPHAL/refreshtoken/pkg/interfaces"
+	"github.com/PauloPHAL/refreshtoken/pkg/perrors"
 	"golang.org/x/crypto/bcrypt"
 )
 

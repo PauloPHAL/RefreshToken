@@ -3,9 +3,9 @@ package repository
 import (
 	"context"
 
-	"github.com/PauloPHAL/microservices/pkg/models"
-	"github.com/PauloPHAL/microservices/pkg/perrors"
-	"github.com/PauloPHAL/microservices/pkg/valueobjects"
+	"github.com/PauloPHAL/refreshtoken/pkg/models"
+	"github.com/PauloPHAL/refreshtoken/pkg/perrors"
+	"github.com/PauloPHAL/refreshtoken/pkg/valueobjects"
 	"gorm.io/gorm"
 )
 

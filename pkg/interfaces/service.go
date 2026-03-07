@@ -3,7 +3,7 @@ package interfaces
 import (
 	"context"
 
-	"github.com/PauloPHAL/microservices/pkg/dto"
+	"github.com/PauloPHAL/refreshtoken/pkg/dto"
 )
 
 type UserService interface {

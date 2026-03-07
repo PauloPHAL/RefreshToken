@@ -1,4 +1,4 @@
-module github.com/PauloPHAL/microservices
+module github.com/PauloPHAL/refreshtoken
 
 go 1.25.5
 

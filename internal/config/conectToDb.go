@@ -3,7 +3,7 @@ package config
 import (
 	"fmt"
 
-	"github.com/PauloPHAL/microservices/pkg/models"
+	"github.com/PauloPHAL/refreshtoken/pkg/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )

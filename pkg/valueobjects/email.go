@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/PauloPHAL/microservices/pkg/perrors"
+	"github.com/PauloPHAL/refreshtoken/pkg/perrors"
 )
 
 type Email struct {

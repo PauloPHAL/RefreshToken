@@ -3,8 +3,8 @@ package interfaces
 import (
 	"context"
 
-	"github.com/PauloPHAL/microservices/pkg/dto"
-	"github.com/PauloPHAL/microservices/pkg/models"
+	"github.com/PauloPHAL/refreshtoken/pkg/dto"
+	"github.com/PauloPHAL/refreshtoken/pkg/models"
 )
 
 type UserRepository interface {

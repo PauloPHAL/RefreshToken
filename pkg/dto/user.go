@@ -1,6 +1,6 @@
 package dto
 
-import "github.com/PauloPHAL/microservices/pkg/perrors"
+import "github.com/PauloPHAL/refreshtoken/pkg/perrors"
 
 type UserDTO struct {
 	Name     string `json:"name" binding:"required"`

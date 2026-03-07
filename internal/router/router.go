@@ -1,7 +1,7 @@
 package router
 
 import (
-	"github.com/PauloPHAL/microservices/internal/container"
+	"github.com/PauloPHAL/refreshtoken/internal/container"
 	"github.com/gin-gonic/gin"
 )
 
