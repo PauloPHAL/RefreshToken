@@ -34,7 +34,7 @@ func NewContainer(database *gorm.DB, jwtSecret string, passwordCost int, cache *
 	authRepo := repository.NewAuthRepository(database)
 
 	userService := services.NewUserService(userRepo, passwordManager, cache)
-	authService := services.NewAuthService(authRepo, tokenGenerator, passwordManager)
+	authService := services.NewAuthService(authRepo, tokenGenerator, passwordManager, cache)
 
 	userHandler := handlers.NewUserHandler(userService)
 	authHandler := handlers.NewAuthHandler(authService)
@@ -42,5 +42,6 @@ func NewContainer(database *gorm.DB, jwtSecret string, passwordCost int, cache *
 	return &Container{
 		UserHandler: userHandler,
 		AuthHandler: authHandler,
+		Cache:       cache,
 	}
 }

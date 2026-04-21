@@ -3,7 +3,6 @@ package services
 import (
 	"context"
 	"encoding/json"
-	"fmt"
 	"time"
 
 	"github.com/PauloPHAL/refreshtoken/internal/config"
@@ -40,15 +39,12 @@ func (u *UserServiceImpl) GetUser(ctx context.Context, id string) (*dto.UserResp
 	if err == nil {
 		var user models.User
 		if err := json.Unmarshal(cachedData, &user); err == nil {
-			fmt.Println("User fetched from cache")
 			return &dto.UserResponseDTO{
 				ID:    user.GetID(),
 				Name:  user.GetName(),
 				Email: user.GetEmail(),
 			}, nil
 		}
-	} else {
-		fmt.Printf("cache get failed for user:%s: %v\n", id, err)
 	}
 
 	user, err := u.repo.GetUserByID(ctx, id)
@@ -56,9 +52,7 @@ func (u *UserServiceImpl) GetUser(ctx context.Context, id string) (*dto.UserResp
 		return nil, err
 	}
 
-	if err := u.cache.Set("user:"+id, user, time.Hour); err != nil {
-		fmt.Printf("cache set failed for user:%s: %v\n", id, err)
-	}
+	u.cache.Set("user:"+id, user, time.Hour)
 
 	return &dto.UserResponseDTO{
 		ID:    user.GetID(),

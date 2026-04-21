@@ -34,3 +34,7 @@ func (c *Cache) Set(key string, value interface{}, ttl time.Duration) error {
 func (c *Cache) Get(key string) ([]byte, error) {
 	return c.client.Get(context.Background(), key).Bytes()
 }
+
+func (c *Cache) Delete(key string) error {
+	return c.client.Del(context.Background(), key).Err()
+}
