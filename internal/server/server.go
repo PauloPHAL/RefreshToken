@@ -8,11 +8,11 @@ import (
 	"gorm.io/gorm"
 )
 
-func Start(database *gorm.DB) {
+func Start(database *gorm.DB, cache *config.Cache) {
 	rotas := gin.Default()
 
 	cfg := config.GetConfig()
-	container := container.NewContainer(database, cfg.GetJWTSecret(), cfg.GetPasswordCost())
+	container := container.NewContainer(database, cfg.GetJWTSecret(), cfg.GetPasswordCost(), cache)
 
 	router.Api(rotas, container)
 

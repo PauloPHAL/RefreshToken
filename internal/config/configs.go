@@ -3,25 +3,31 @@ package config
 var configInstance *config
 
 type config struct {
-	host            string
-	port            int
-	user            string
-	password        string
-	dbName          string
-	jwtSecret       string
-	developmentMode bool
-	passwordCost    int
+	hostPostgres     string
+	portPostgres     int
+	userPostgres     string
+	passwordPostgres string
+	dbNamePostgres   string
+	jwtSecret        string
+	developmentMode  bool
+	passwordCost     int
+
+	//-----------------
+	redisHost string
+	redisPort int
 }
 
 func newConfig() *config {
 	return &config{
-		host:         "localhost",
-		port:         5432,
-		user:         "postgres",
-		password:     "postgres",
-		dbName:       "mydatabase",
-		jwtSecret:    "43453gdgerge#%$$%¨FGYwwfwFAFAOUQI1314141",
-		passwordCost: 12,
+		hostPostgres:     "localhost",
+		portPostgres:     5432,
+		userPostgres:     "postgres",
+		passwordPostgres: "postgres",
+		dbNamePostgres:   "mydatabase",
+		jwtSecret:        "43453gdgerge#%$$%¨FGYwwfwFAFAOUQI1314141",
+		passwordCost:     12,
+		redisHost:        "localhost",
+		redisPort:        6379,
 	}
 }
 
@@ -33,23 +39,23 @@ func GetConfig() *config {
 }
 
 func (c *config) GetHost() string {
-	return c.host
+	return c.hostPostgres
 }
 
 func (c *config) GetPort() int {
-	return c.port
+	return c.portPostgres
 }
 
 func (c *config) GetUser() string {
-	return c.user
+	return c.userPostgres
 }
 
 func (c *config) GetPassword() string {
-	return c.password
+	return c.passwordPostgres
 }
 
 func (c *config) GetDBName() string {
-	return c.dbName
+	return c.dbNamePostgres
 }
 
 func (c *config) GetJWTSecret() string {
@@ -62,4 +68,12 @@ func (c *config) IsDevelopmentMode() bool {
 
 func (c *config) GetPasswordCost() int {
 	return c.passwordCost
+}
+
+func (c *config) GetRedisHost() string {
+	return c.redisHost
+}
+
+func (c *config) GetRedisPort() int {
+	return c.redisPort
 }

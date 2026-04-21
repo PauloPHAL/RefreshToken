@@ -5,14 +5,11 @@ import (
 	"github.com/PauloPHAL/refreshtoken/internal/server"
 )
 
-func initialize() {
-	config.GetConfig()
-	config.GetDB()
-	config.SyncDB()
-}
-
 func main() {
-	initialize()
+	config.GetConfig()
+	db := config.GetDB()
+	cache := config.NewCache()
+	config.SyncDB()
 
-	server.Start(config.DB)
+	server.Start(db, cache)
 }
